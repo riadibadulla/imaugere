@@ -4,8 +4,8 @@ import numpy as np
 from skimage import exposure, color, transform, util
 import random
 
-# source = "/home/riadibadulla/gun_detection/no"
-# destination = "/home/riadibadulla/gun_detection/guns/no"
+# source = "/data"
+# destination = "/data"
 
 source = "/home/riadibadulla/gun_detection/image2"
 destination = "/home/riadibadulla/gun_detection/guns/no"
