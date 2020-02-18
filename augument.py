@@ -19,7 +19,7 @@ def flip(img):
 def rotate(img):
     return transform.rotate(img, random.uniform(-20, 20), preserve_range=True)
 
-def AHE(img):
+def noise(img):
     img_nos = util.random_noise(img, mode='gaussian', clip = True)
     noise_img = np.array(255 * img_nos, dtype='uint8')
     return noise_img
@@ -34,17 +34,17 @@ def aug_function(img,i):
     elif (mux==2):
         return rotate(img)
     elif (mux==3):
-        return AHE(img)
+        return noise(img)
     elif (mux==4):
-        return rotate(contrast_stretching(AHE(img)))
+        return rotate(contrast_stretching(noise(img)))
     elif (mux==5):
         return flip(rotate(contrast_stretching(img)))
     elif (mux==6):
-        return rotate(AHE(img))
+        return rotate(noise(img))
     elif (mux==7):
         return flip(rotate(img))
     elif (mux==8):
-        return flip(AHE(img))
+        return flip(noise(img))
     elif (mux==9):
         return img
 
