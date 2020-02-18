@@ -4,8 +4,8 @@ import numpy as np
 from skimage import exposure, color, transform, util
 import random
 
-source = "/data"
-destination = "/data"
+source = "data/"
+destination = "data/"
 
 
 def contrast_stretching(img):
