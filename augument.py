@@ -14,12 +14,15 @@ def contrast_stretching(img):
     return img_rescale
 
 def flip(img):
+    "flips the image horizontally"
     return np.fliplr(img)
 
 def rotate(img):
+    "rotates the image by random number of degrees from -20 to 20"
     return transform.rotate(img, random.uniform(-20, 20), preserve_range=True)
 
 def noise(img):
+    "Adds a gausian noise to the function"
     img_nos = util.random_noise(img, mode='gaussian', clip = True)
     noise_img = np.array(255 * img_nos, dtype='uint8')
     return noise_img
